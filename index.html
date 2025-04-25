@@ -2,127 +2,78 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vanilla-app-template/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/ScrollReviewsAPI/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
-    <script type="module" crossorigin src="/vanilla-app-template/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/styles-DvPDDfy5.css">
+    <script type="module" crossorigin src="/ScrollReviewsAPI/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/ScrollReviewsAPI/assets/vendor-DG57KH4D.js">
+    <link rel="stylesheet" crossorigin href="/ScrollReviewsAPI/assets/vendor-DMjVsepR.css">
+    <link rel="stylesheet" crossorigin href="/ScrollReviewsAPI/assets/index-CiSA2InF.css">
   </head>
   <body>
-    <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="/vanilla-app-template/assets/sprite-E8vg0sBb.svg#logo"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-
     <main>
-      <!-- Loads the specified .html file -->
-      <section class="vite-promo">
-  <div class="container">
-    <div class="vite-promo-thumb">
-      <a
-        class="vite-promo-link"
-        href="https://vitejs.dev/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Link to Vite official website"
-        title="Vite.js  build tool"
-      >
-        <!-- Path to images as from index.html file -->
-        <img
-          class="pic"
-          src="/vanilla-app-template/assets/vite-logo-9o_aqrTe.png"
-          alt="Vite logo"
-          width="640"
-          height="640"
-        />
-      </a>
-    </div>
-    <h1 class="main-title">
-      <span class="main-title-gradient">Vite</span>
-      Template by
-      <a
-        class="main-title-link"
-        href="https://github.com/goitacademy/vanilla-app-template"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT
-      </a>
-    </h1>
-  </div>
-</section>
-
-      <article class="badges">
-  <div class="container">
-    <ul class="badges-list">
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-html-inject"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          HTML Inject
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-full-reload"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Full Reload
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/postcss-sort-media-queries"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Sort Media Queries
-        </a>
-      </li>
-    </ul>
-  </div>
-</article>
-
+      <div class="container">
+        <h2 class="title_reviews">reviews</h2>
+        <div class="swiper">
+          <ul class="swiper-wrapper" id="reviews-container">
+            <!-- Динамічно додані слайди будуть тут -->
+          </ul>
+          <!-- Кнопки навігації -->
+          <div class="swiper-btns">
+            <div class="swiper-button-prev" aria-label="previous">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 12H4.00001"
+                  stroke="#292929"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 18L4 12L10 6"
+                  stroke="#292929"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="swiper-button-next" aria-label="next">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 12H20"
+                  stroke="#292929"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14 6L20 12L14 18"
+                  stroke="#292929"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="error-message hidden" >
+            No reviews found
+        </div>
+      </div>
     </main>
-
-    <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
-  </div>
-</footer>
-
 
   </body>
 </html>
