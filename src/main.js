@@ -1,52 +1,3 @@
-// import iziToast from 'izitoast';
-// import 'izitoast/dist/css/iziToast.min.css';
-
-// import {
-//   fetchReviews,
-//   renderReviews,
-//   showNotFound,
-//   totalPages,
-// } from './reviews.js';
-// import { initSwiper, updateButtonsState, updateSwiper } from './swiper.js';
-
-// let currentPage = 1;
-// const btnNext = document.querySelector('.swiper-button-next');
-
-// async function loadInitialReviews() {
-//   try {
-//     const reviews = await fetchReviews(currentPage);
-//     renderReviews(reviews);
-//     initSwiper();
-//   } catch (err) {
-//     iziToast.error({ message: 'Failed to load reviews', position: 'topRight' });
-//     showNotFound();
-//     btnNext.disabled = true;
-//   }
-// }
-
-// btnNext.addEventListener('click', async () => {
-//   const swiperWrapper = document.querySelector('.swiper-wrapper');
-//   const visibleSlides = swiperWrapper.querySelectorAll('.swiper-slide').length;
-
-//   const isAtEnd = visibleSlides <= currentPage * 2;
-//   if (isAtEnd && currentPage < totalPages) {
-//     currentPage += 1;
-//     try {
-//       const reviews = await fetchReviews(currentPage);
-//       renderReviews(reviews);
-//       updateSwiper();
-//       updateButtonsState(totalPages, currentPage);
-//     } catch (err) {
-//       iziToast.error({
-//         message: 'Error loading more reviews',
-//         position: 'topRight',
-//       });
-//     }
-//   }
-// });
-
-// loadInitialReviews();
-
 import axios from 'axios';
 
 import Swiper from 'swiper';
@@ -75,17 +26,17 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
   breakpoints: {
-    260: {
+    360: {
       slidesPerView: 1,
-      spaceBetween: 20,
+      //   spaceBetween: 20,
     },
     768: {
       slidesPerView: 1,
-      spaceBetween: 30,
+      //   spaceBetween: 30,
     },
-    1280: {
+    1152: {
       slidesPerView: 2,
-      spaceBetween: 32,
+      //   spaceBetween: 32,
     },
   },
 });
@@ -104,7 +55,7 @@ function renderReviews(reviews) {
   const markup = reviews
     .map(
       ({ author, avatar_url, review }) => `
-          <li class="swiper-slide">
+          <li class="swiper-slide libox">
             <div class="review-card">
             <p class="review-text">${review}</p>
             <div class="review-info">
